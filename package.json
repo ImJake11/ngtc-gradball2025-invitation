@@ -1,5 +1,5 @@
 {
-  "name": "gbi",
+  "name": "gradballinvitation",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^12.6.3",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "react-player": "^2.16.0",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
