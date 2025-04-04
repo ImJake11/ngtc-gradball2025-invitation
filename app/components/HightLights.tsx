@@ -1,5 +1,3 @@
-"use client";
-
 import ReactPlayer from "react-player";
 
 export default function HighlightsComp({ isLeft }: { isLeft: boolean }) {
@@ -23,7 +21,7 @@ export default function HighlightsComp({ isLeft }: { isLeft: boolean }) {
     <div className="w-screen flex flex-row gap-[15px] overflow-hidden">
       {isLeft && <Content />}
       <div
-        className={`w-[60%] h-[200px] bg-gray-200 rounded-[10px] ${
+        className={`w-[60%] h-[200px] bg-transparent rounded-[10px] ${
           isLeft ? "mr-[20px]" : undefined
         }`}
       >
@@ -32,6 +30,7 @@ export default function HighlightsComp({ isLeft }: { isLeft: boolean }) {
           width={"100%"}
           loop
           controls={false}
+          playing={true}
           muted
           url={
             "https://firebasestorage.googleapis.com/v0/b/isafe-bca33.appspot.com/o/video-samples%2FGala%20Night%20Teaser%20Video%202025.mp4?alt=media&token=ef693def-0a96-4180-a1da-63c71395ebc4"

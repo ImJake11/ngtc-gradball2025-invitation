@@ -11,28 +11,30 @@ export default function PageOne() {
   return (
     <MotionConfig
       transition={{
-        duration: .4,
+        duration: 0.4,
         ease: "easeInOut",
         bounce: 1,
       }}
     >
-      <div
-        className="min-w-screen min-h-screen p-[20px] flex flex-col items-center text-center gap-[25px]"
-        style={{
-          backgroundColor: "var(--background)",
-        }}
-      >
+      <div className="min-w-screen min-h-screen p-[30px] flex flex-col items-center justify-end text-center gap-[25px]">
         <motion.p
           ref={ref}
-          className="text-[3rem] font-bold"
+          className="text-[1rem] font-bold pr-[40px] pl-[40px]"
           animate={{ scale: isInview ? 1 : 0 }}
+          style={{
+            color: "#dcb151",
+          }}
         >
           "Enchanted Masquerade: A Night of Mystery & Elegance"
         </motion.p>
-        <p className="font-bold">SHS Graduation Ball 2025</p>
+        <p  className="font-bold text-white text-[12px]">SHS Graduation Ball 2025</p>
+        <div className="h-[30px]"></div>
         <motion.div
           ref={ref}
-          className="flex flex-col gap-[20px]"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, .200)",
+          }}
+          className="flex flex-col gap-[20px] text-[12px] text-white w-fit h-fit p-[30px] rounded-[10px]"
           animate={{
             transform: isInview ? "translateY(0px)" : "translateY(300px)",
           }}
@@ -55,6 +57,7 @@ export default function PageOne() {
           </p>
           <p>Let the mystery unfold and the enchantment begin!</p>
         </motion.div>
+        <div className="h-[50px]"></div>
       </div>
     </MotionConfig>
   );
