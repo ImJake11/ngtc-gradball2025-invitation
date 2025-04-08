@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SliderIndicator from "./components/sliderIndicator/SliderIndicator";
 import Image from "next/image";
-import bg from "@/public/bg.jpg";
+import bg from "@/public/main-bg.jpg";
 import localFont from "next/font/local";
 
 const font = localFont({ src: "../public/gianteh.otf" });
@@ -32,20 +32,11 @@ export default function Home() {
   return (
     <>
       <div
-        className={`${font.className} max-w-[720px] min-h-screen relative box-border overflow-hidden`}
+        className={`${font.className} max-w-[720px] min-h-screen relative box-border overflow-auto`}
       >
         <Image src={bg} alt={"bg"} className="absolute"></Image>
         <div className="absolute w-dvw">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            navigation
-            onSlideChange={(swiper) => setPage(swiper.activeIndex)}
-          >
-            {page.map((data, index) => (
-              <SwiperSlide key={index}>{data}</SwiperSlide>
-            ))}
-          </Swiper>
+         
         </div>
         <SliderIndicator current={currentPage} length={page.length} />
       </div>
