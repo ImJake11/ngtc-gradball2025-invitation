@@ -31,20 +31,20 @@ export default function PageOne() {
         <Image
           src={mask}
           alt="mask"
-          className="w-[55vw]  absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
+          className="w-[55vw] h-auto absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
         ></Image>
         <Image
           src={border}
           alt="border"
-          className="w-[30rem] absolute top-[1.5%] left-[-34%] rotate-[-30deg] opacity-80"
+          className="w-[80vw] absolute top-[1.5%] left-[-34%] rotate-[-30deg] opacity-80"
         ></Image>
         <Image
           src={border}
           alt="border"
-          className="w-[30rem] absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
+          className="w-[80vw] absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
         ></Image>
         <div
-          className="w-screen absolute top-[26%] left-0 text-[1.4rem]"
+          className="w-screen absolute top-[28%] left-0 text-[1.4em]"
           style={{
             textShadow:
               "2px 2px 3px black, 3px 3px 3px black, -2px -2px 3px black, -3px -3px 3px black",
@@ -66,7 +66,7 @@ export default function PageOne() {
           </p>
         </div>
         <div
-          className="w-screen absolute top-[33%] text-white"
+          className="w-screen absolute top-[35%] text-white"
           style={{
             textShadow: "2px 2px 3px black, -2px -2px 3px black",
           }}
@@ -76,7 +76,7 @@ export default function PageOne() {
         <Image
           src={logo}
           alt="logo"
-          className="w-[5rem] absolute top-[41%] left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="w-[11vw] absolute top-[44%] left-1/2 -translate-x-1/2 -translate-y-1/2"
         ></Image>
         <div
           className={`${gothic.className}  flex flex-col justify-evenly absolute top-[74%]  left-1/2 w-[77vw] h-[35rem] -translate-x-1/2 -translate-y-1/2 text-[1rem] p-[40px] font-extrabold`}
