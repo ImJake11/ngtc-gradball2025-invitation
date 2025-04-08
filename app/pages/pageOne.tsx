@@ -36,12 +36,12 @@ export default function PageOne() {
         <Image
           src={border}
           alt="border"
-          className="w-[80vw] absolute top-[1.5%] left-[-34%] rotate-[-30deg] opacity-80"
+          className="w-[80vw] absolute top-[1.5%] left-[-34vw] rotate-[-30deg] opacity-80"
         ></Image>
         <Image
           src={border}
           alt="border"
-          className="w-[80vw] absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
+          className="w-[80vw] absolute top-[1.5%] right-[-34vw] rotate-[30deg] opacity-80"
         ></Image>
         <div
           className="w-screen absolute top-[28vh] left-0 text-[3.5vw]"
@@ -66,7 +66,7 @@ export default function PageOne() {
           </p>
         </div>
         <div
-          className="w-screen absolute top-[35%] text-white"
+          className="w-screen absolute top-[36vh] text-white"
           style={{
             textShadow: "2px 2px 3px black, -2px -2px 3px black",
           }}
@@ -76,10 +76,10 @@ export default function PageOne() {
         <Image
           src={logo}
           alt="logo"
-          className="w-[11vw] absolute top-[44%] left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="w-[11vw] absolute top-[45vh] left-1/2 -translate-x-1/2 -translate-y-1/2"
         ></Image>
         <div
-          className={`${gothic.className}  flex flex-col justify-evenly absolute top-[74%]  left-1/2 w-[77vw] h-[35rem] -translate-x-1/2 -translate-y-1/2 text-[1rem] p-[40px] font-extrabold`}
+          className={`${gothic.className}  flex flex-col justify-evenly absolute top-[84vh]  left-1/2 w-[77vw] h-[55vh] -translate-x-1/2 -translate-y-1/2 text-[2.5vw] p-[5vw] font-extrabold`}
           style={{
             backgroundColor: "red",
             backgroundImage:
@@ -88,7 +88,7 @@ export default function PageOne() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          <p className="text-[1.1rem]">
+          <p className="text-[2.8vw]">
             Welcome to Enchanted Masquerade: A Night of Mystery & Elegance
           </p>
           <p>
