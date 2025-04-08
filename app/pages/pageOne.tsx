@@ -31,7 +31,7 @@ export default function PageOne() {
         <Image
           src={mask}
           alt="mask"
-          className="w-[23rem]  absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
+          className="w-[55vw]  absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
         ></Image>
         <Image
           src={border}
