@@ -27,7 +27,11 @@ export default function PageOne() {
       }}
     >
       <div className="max-w-[720px] max-h-screen text-center overflow-y-auto overflow-x-hidden relative">
-        <Image src={firstPageBg} alt="bg" className="relative"></Image>
+        <Image
+          src={firstPageBg}
+          alt="bg"
+          className="relative min-w-screen"
+        ></Image>
         <Image
           src={mask}
           alt="mask"
@@ -66,7 +70,7 @@ export default function PageOne() {
           </p>
         </div>
         <div
-          className="w-screen absolute top-[57vw] text-white"
+          className="w-screen absolute top-[57vw] text-white text-[2.5vw]"
           style={{
             textShadow: "2px 2px 3px black, -2px -2px 3px black",
           }}
@@ -76,10 +80,10 @@ export default function PageOne() {
         <Image
           src={logo}
           alt="logo"
-          className="w-[11vw] absolute top-[70vw] left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="w-[11vw] absolute top-[72vw] left-1/2 -translate-x-1/2 -translate-y-1/2"
         ></Image>
         <div
-          className={`${gothic.className}  flex flex-col justify-evenly absolute top-[130vw]  left-1/2 w-[77vw] h-[55vh] -translate-x-1/2 -translate-y-1/2 text-[2.5vw] p-[5vw] font-extrabold`}
+          className={`${gothic.className}  flex flex-col justify-center gap-[5vw] absolute top-[135vw]  left-1/2 w-[77vw] h-[55vh] -translate-x-1/2 -translate-y-1/2 text-[2.5vw] p-[8vw] font-extrabold`}
           style={{
             backgroundColor: "red",
             backgroundImage:
