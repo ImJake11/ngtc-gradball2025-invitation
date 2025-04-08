@@ -29,25 +29,22 @@ export default function PageOne() {
       <div className="max-w-[720px] max-h-screen text-center overflow-y-auto overflow-x-hidden relative">
         <Image src={firstPageBg} alt="bg" className="relative"></Image>
         <Image
-          width={340}
           src={mask}
           alt="mask"
-          className="absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
+          className="w-[23rem]  absolute top-[3%] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
         ></Image>
         <Image
-          width={485}
           src={border}
           alt="border"
-          className="absolute top-[1.5%] left-[-34%] rotate-[-30deg] opacity-80"
+          className="w-[30rem] absolute top-[1.5%] left-[-34%] rotate-[-30deg] opacity-80"
         ></Image>
         <Image
-          width={485}
           src={border}
           alt="border"
-          className="absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
+          className="w-[30rem] absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
         ></Image>
         <div
-          className="w-screen absolute top-[26%] left-0 text-[22px]"
+          className="w-screen absolute top-[26%] left-0 text-[1.4rem]"
           style={{
             textShadow:
               "2px 2px 3px black, 3px 3px 3px black, -2px -2px 3px black, -3px -3px 3px black",
@@ -77,21 +74,21 @@ export default function PageOne() {
           <p>SHS Graduation Ball 2025</p>
         </div>
         <Image
-          width={75}
           src={logo}
           alt="logo"
-          className="absolute top-[41%] left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="w-[5rem] absolute top-[41%] left-1/2 -translate-x-1/2 -translate-y-1/2"
         ></Image>
         <div
-          className={`${gothic.className} flex flex-col justify-evenly absolute top-[74%]  left-1/2 w-[77vw] h-[550px] -translate-x-1/2 -translate-y-1/2 text-[16px] p-[40px] font-bold`}
+          className={`${gothic.className}  flex flex-col justify-evenly absolute top-[74%]  left-1/2 w-[77vw] h-[35rem] -translate-x-1/2 -translate-y-1/2 text-[1rem] p-[40px] font-extrabold`}
           style={{
+            backgroundColor: "red",
             backgroundImage:
               "linear-gradient(45deg, #0e3168, #001138, #0e3168, #001138, #0e3168, #001138)",
             backgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
         >
-          <p className="text-[18px]">
+          <p className="text-[1.1rem]">
             Welcome to Enchanted Masquerade: A Night of Mystery & Elegance
           </p>
           <p>
