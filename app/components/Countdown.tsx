@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { RefObject, useEffect, useRef, useState } from "react";
 
 export default function Countdown() {
@@ -68,26 +68,45 @@ function Tile({
   isInView,
 }: {
   label: string;
-  dur: number;
+  dur: any;
   ref: RefObject<null>;
   isInView: boolean;
 }) {
   return (
     <motion.div
       ref={ref}
-
       style={{
+        position: "relative",
         border: "solid 1px var(--primary)",
         borderRadius: "10px",
+        color: "var(--primary)",
       }}
-
       className="h-[100px] flex flex-col justify-center flex-[1]"
       animate={{ scale: isInView ? 1 : 0 }}
-      exit={{scale: 0}}
-
+      exit={{ scale: 0 }}
     >
-      <span>{dur}</span>
-      <span>{label.toUpperCase()}</span>
+      <AnimatePresence>
+        <motion.span
+          key={dur}
+          className="text-[20px] absolute place-self-center transform-[translateY(-10px)]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          exit={{
+            transform: "translateY(-30px)",
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.,
+          }}
+        >
+          {dur}
+        </motion.span>
+      </AnimatePresence>
+      <span className="absolute bottom-[20px] place-self-center">{label}</span>
     </motion.div>
   );
 }

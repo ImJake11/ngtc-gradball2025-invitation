@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <div
-        className={`${font.className} min-w-screen min-h-screen relative box-border overflow-hidden`}
+        className={`${font.className} max-w-[720px] min-h-screen relative box-border overflow-hidden`}
       >
         <Image src={bg} alt={"bg"} className="absolute"></Image>
         <div className="absolute w-dvw">

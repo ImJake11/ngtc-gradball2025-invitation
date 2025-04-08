@@ -1,6 +1,6 @@
+"use client";
+
 import { useRef } from "react";
-import ListComponent from "../components/ListStileCom";
-import ListModel from "../models/list";
 import { motion, MotionConfig } from "framer-motion";
 import { useInView } from "framer-motion";
 
@@ -16,18 +16,20 @@ export default function PageOne() {
         bounce: 1,
       }}
     >
-      <div className="min-w-screen min-h-screen p-[30px] flex flex-col items-center justify-end text-center gap-[25px]">
+      <div className="max-w-[720px] min-h-screen p-[30px] flex flex-col items-center justify-end text-center gap-[25px]">
         <motion.p
           ref={ref}
           className="text-[1rem] font-bold pr-[40px] pl-[40px]"
           animate={{ scale: isInview ? 1 : 0 }}
           style={{
-            color: "#dcb151",
+            color: "var(--primary)",
           }}
         >
           "Enchanted Masquerade: A Night of Mystery & Elegance"
         </motion.p>
-        <p  className="font-bold text-white text-[12px]">SHS Graduation Ball 2025</p>
+        <p className="font-bold text-white text-[12px]">
+          SHS Graduation Ball 2025
+        </p>
         <div className="h-[30px]"></div>
         <motion.div
           ref={ref}
