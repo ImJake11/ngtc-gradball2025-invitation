@@ -44,7 +44,7 @@ export default function PageOne() {
           className="w-[80vw] absolute top-[1.5%] right-[-34%] rotate-[30deg] opacity-80"
         ></Image>
         <div
-          className="w-screen absolute top-[28%] left-0 text-[1.4em]"
+          className="w-screen absolute top-[28vh] left-0 text-[1.4em]"
           style={{
             textShadow:
               "2px 2px 3px black, 3px 3px 3px black, -2px -2px 3px black, -3px -3px 3px black",
