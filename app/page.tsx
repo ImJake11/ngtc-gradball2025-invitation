@@ -1,53 +1,56 @@
 "use client";
 
-import { useState } from "react";
-import PageFive from "./pages/pageFive";
-import PageFour from "./pages/pageFour";
-import PageOne from "./pages/pageOne";
-import PageSeven from "./pages/pageSeven";
-import PageSix from "./pages/pageSix";
-import PageThree from "./pages/pageThree";
-import PageTwo from "./pages/pageTwo";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {useState} from "react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
-import SliderIndicator from "./components/sliderIndicator/SliderIndicator";
-import Image from "next/image";
-import bg from "@/public/bg.jpg";
 import localFont from "next/font/local";
+import "@/app/styles/main.css";
+import {A11y, Navigation, Pagination} from "swiper/modules";
+import SliderIndicator from "@/app/components/sliderIndicator/SliderIndicator";
+import PageOne from "@/app/pages/pageOne";
+import PageTwo from "@/app/pages/pageTwo";
+import PageThree from "@/app/pages/pageThree";
+import PageFour from "@/app/pages/pageFour";
+import PageFive from "@/app/pages/pageFive";
+import PageSix from "@/app/pages/pageSix";
+import PageSeven from "@/app/pages/pageSeven";
 
-const font = localFont({ src: "../public/gianteh.otf" });
+
+const font = localFont({src: "../public/gianteh.otf"});
 
 export default function Home() {
-  const [currentPage, setPage] = useState(0);
 
-  const page = [
-    <PageOne />,
-    <PageTwo />,
-    <PageThree />,
-    <PageFour />,
-    <PageFive />,
-    <PageSix />,
-    <PageSeven />,
-  ];
-  return (
-    <>
-      <div
-        className={`${font.className} max-w-[720px] min-h-screen relative box-border overflow-y-auto overflow-x-hidden`}
-      >
-        <div className="absolute w-dvw">
-          <Swiper
-            spaceBetween={0}
-            slidesPerView={1}
-            navigation
-            onSlideChange={(swiper) => setPage(swiper.activeIndex)}
-          >
-            {page.map((data, index) => (
-              <SwiperSlide key={index}>{data}</SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-        <SliderIndicator current={currentPage} length={page.length} />
-      </div>
-    </>
-  );
+    const [currentPage, setPage] = useState(0);
+
+
+    const page = [
+        <PageOne/>,
+        <PageTwo/>,
+        <PageThree/>,
+        <PageFour/>,
+        <PageFive/>,
+        <PageSix/>,
+        <PageSeven/>,
+    ];
+    return (
+        <>
+            <div
+                className="main-page"
+            >
+
+                <Swiper
+                    modules={[Navigation, Pagination, A11y]}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={(swiper) => setPage(swiper.activeIndex)}
+                >
+                    {page.map((Component, index) => (
+                        <SwiperSlide key={index}>{Component}</SwiperSlide>
+                    ))}
+                </Swiper>
+                <SliderIndicator length={page.length} current={currentPage}/>
+            </div>
+        </>
+    );
 }
