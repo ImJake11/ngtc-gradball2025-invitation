@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageOne.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageOne.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/sliderIndicator/SliderIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sliderIndicator/SliderIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1744164490826</updated>
-      <workItem from="1744164494695" duration="5963000" />
+      <workItem from="1744164494695" duration="7926000" />
     </task>
     <servers />
   </component>

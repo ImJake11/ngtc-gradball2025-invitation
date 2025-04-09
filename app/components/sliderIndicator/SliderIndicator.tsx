@@ -1,42 +1,43 @@
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 export default function SliderIndicator({
-  length,
-  current,
-}: {
-  length: number;
-  current: number;
+                                            length,
+                                            current,
+                                        }: {
+    length: number;
+    current: number;
 }) {
-  return (
-    <div className="absolute flex flex-row z-[1] bottom-0 right-[50%] left-[40%] h-[40px] w-[125px] justify-evenly gap-1 items-center">
-      {Array.from({ length: length }).map((_, index) => {
-        const isCurrent = index === current;
+    return (
+        <div
+            className={`absolute flex z-[1] bottom-0 left-0 h-[5px] w-screen`}>
+            {Array.from({length: length}).map((_, index) => {
+                const isCurrent = index === current;
 
-        return (
-          <motion.div
-            initial={{
-              transform: "translateY(50px)",
-            }}
-            animate={{
-              transform: isCurrent ? "translateY(0px)" : "translateY(5px)",
-              width: "10px",
-              height: "10px",
-              backgroundColor: isCurrent
-                ? "var(--primary)"
-                : "var(--background)",
-            }}
-            transition={{
-              duration: 0.35,
-              ease: "easeInOut",
-            }}
-            key={index}
-            className={`rounded-full`}
-            style={{
-              border: "solid 1px var(--primary)",
-            }}
-          ></motion.div>
-        );
-      })}
-    </div>
-  );
+                return (
+                    <motion.div
+
+                        transition={{
+                            duration: .25,
+                            ease: "easeInOut",
+                        }}
+
+                        animate={{
+                            backgroundColor: isCurrent ? "var(--primary)" : "rgba(252, 186, 3, .0)"
+                        }}
+
+                        key={index}
+                        className={`h-[5px] flex-[1] 
+                        ${index === 0 && "rounded-tl-10px"}  
+                        ${index === 0 && "rounded-bl-10px"}
+                        ${index === length - 1 && "rounded-br-10px"}
+                         ${index === length - 1 && "rounded-tr-10px"}
+                        `}
+                        style={{
+                            border: "solid 1px var(--primary)",
+                        }}
+                    ></motion.div>
+                );
+            })}
+        </div>
+    );
 }
