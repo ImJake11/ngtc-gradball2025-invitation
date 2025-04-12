@@ -11,9 +11,6 @@ import PageOne from "@/app/pages/pageOne";
 import PageTwo from "@/app/pages/pageTwo";
 import PageThree from "@/app/pages/pageThree";
 import PageFour from "@/app/pages/pageFour";
-import PageFive from "@/app/pages/pageFive";
-import PageSix from "@/app/pages/pageSix";
-import PageSeven from "@/app/pages/pageSeven";
 
 
 const font = localFont({src: "../public/gianteh.otf"});
@@ -28,9 +25,6 @@ export default function Home() {
         <PageTwo/>,
         <PageThree/>,
         <PageFour/>,
-        <PageFive/>,
-        <PageSix/>,
-        <PageSeven/>,
     ];
     return (
         <>
