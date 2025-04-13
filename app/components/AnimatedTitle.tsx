@@ -17,7 +17,7 @@ export default function AnimatedTitle({content}: { content: string }) {
 
     return <motion.span
         ref={ref}
-        className={`${font.className} text-[22px] text-white text-center whitespace-nowrap`}
+        className={`${font.className} text-[4vw] text-white text-center whitespace-nowrap`}
 
         animate={{
             letterSpacing: inView ? "0px" : "3px",

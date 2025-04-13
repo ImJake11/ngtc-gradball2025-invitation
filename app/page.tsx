@@ -12,7 +12,6 @@ import PageTwo from "@/app/pages/pageTwo";
 import PageThree from "@/app/pages/pageThree";
 import PageFour from "@/app/pages/pageFour";
 
-
 const font = localFont({src: "../public/gianteh.otf"});
 
 export default function Home() {
@@ -26,6 +25,8 @@ export default function Home() {
         <PageThree/>,
         <PageFour/>,
     ];
+
+
     return (
         <>
             <div
@@ -45,6 +46,7 @@ export default function Home() {
                 </Swiper>
                 <SliderIndicator length={page.length} current={currentPage}/>
             </div>
+
         </>
     );
 }

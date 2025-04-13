@@ -21,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "react-image-webp": "^0.8.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

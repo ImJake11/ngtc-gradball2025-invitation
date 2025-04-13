@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Countdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Countdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/AnimatedTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AnimatedTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/DetailsContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/DetailsContent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HightLights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HightLights.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageSeven.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageThree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageThree.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageTwo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageTwo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pageOne.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageOne.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resources/Masquerade Gradball Invitation Page1 bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/resources/mask.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +92,8 @@
       <workItem from="1744164494695" duration="7998000" />
       <workItem from="1744215190708" duration="79000" />
       <workItem from="1744445635056" duration="5349000" />
-      <workItem from="1744451095387" duration="13313000" />
+      <workItem from="1744451095387" duration="13856000" />
+      <workItem from="1744499346611" duration="3928000" />
     </task>
     <servers />
   </component>
