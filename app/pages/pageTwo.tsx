@@ -1,3 +1,5 @@
+"use client"
+
 import {useRef} from "react";
 import {motion, MotionConfig, useInView} from "framer-motion";
 import Countdown from "@/app/components/Countdown";

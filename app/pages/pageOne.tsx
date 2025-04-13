@@ -1,7 +1,7 @@
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import localFont from "next/font/local";
-import Image from "react-image-webp";
+import Image from "next/image";
 
 const gothic = localFont({
     src: "../../public/centurygothic.ttf",
@@ -25,8 +25,8 @@ export default function PageOne() {
         <motion.div
             className="scroll-page"
         >
-            <Image
-                webp={"/resources/page one bg.webp"}
+            <img
+                src={"/resources/page one bg.webp"}
                 alt={"Page one background"}
 
             />
@@ -44,7 +44,7 @@ export default function PageOne() {
                     delay: 0.6,
                 }}
             >
-                <Image webp={"/resources/mask.webp"} alt="mask"/>
+                <img src={"/resources/mask.webp"} alt="mask"/>
             </motion.div>
 
             <motion.img
