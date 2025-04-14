@@ -7,7 +7,7 @@ export default function DetailsContent({imgPath, details,}: { imgPath: string, d
 
     const ref = useRef(null);
 
-    const isInview = useInView(ref, {once: false, amount: "some"});
+    const isInview = useInView(ref, {once: false, amount: "some",});
 
     return <motion.div
         ref={ref}

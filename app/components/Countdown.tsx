@@ -43,7 +43,7 @@ export default function Countdown() {
 
     return (
         <div
-            className="w-screen h-[100px] flex justify-center items-center absolute top-[43vh] left-1/2 -translate-x-1/2 gap-1">
+            className="w-screen h-[100px] flex justify-center items-center absolute top-[78vw] left-1/2 -translate-x-1/2 gap-1">
             <Tile isInView={isInView} ref={ref} dur={timeLeft.days} label="DAYS"/>
             <Tile isInView={isInView} ref={ref} dur={timeLeft.hours} label="hours"/>
             <Tile

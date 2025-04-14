@@ -8,10 +8,10 @@ export default function PageThree() {
 
     const ref = useRef(null);
 
-    const inView = useInView(ref, {once: false, amount: "all"})
+    const inView = useInView(ref, {once: false, amount: "some"})
 
 
-    return <div ref={ref} className="w-screen h-screen relative">
+    return <div className="w-screen h-screen relative">
 
         {/**  BACKGROUND IMAGE*/}
         <img src="/resources/page 3 4 5 6 bg.png" alt="bg"
@@ -73,6 +73,14 @@ export default function PageThree() {
             <AnimatedTitle content={"Dining & Drinks"}/>
             {diningDrinks}
         </div>
+
+        {/** HIT BOX PURPOSES*/}
+        <div
+            ref={ref}
+            className="w-2 h-[90vh]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        </div>
+
+
     </div>
 
 }
@@ -81,7 +89,7 @@ export default function PageThree() {
 const verticalBorder = (top: string, isLeft: boolean, inView: boolean) => <motion.img
     src="/resources/border.png"
     alt="border"
-    className={`w-[55vw] absolute ${top} ${isLeft ? "left-[-27vw] rotate-[90deg]" : "right-[-27vw] rotate-[-90deg]"}`}
+    className={`w-[55vw] absolute ${top} ${isLeft ? "left-[-29vw] rotate-[90deg]" : "right-[-29vw] rotate-[-90deg]"}`}
 
 
     animate={{
@@ -92,7 +100,7 @@ const verticalBorder = (top: string, isLeft: boolean, inView: boolean) => <motio
 
 
 const themeAtmosphere =
-    <div className="w-full flex flex-col items-center gap-[20px]">
+    <div className="w-full flex flex-col items-center gap-[30px]">
         <DetailsContent imgPath={"/resources/page 3 dress code.png"}
                         details={["Formal attire with masks (black-tie, ball gowns, cocktail dresses, tuxedos)."]}/>
         <DetailsContent imgPath={"/resources/page 3 color palette.png"}
@@ -104,7 +112,7 @@ const themeAtmosphere =
     </div>
 
 
-const entertainmentActivities = <div className="w-full flex flex-col items-center gap-[20px]">
+const entertainmentActivities = <div className="w-full flex flex-col items-center gap-[30px]">
     <DetailsContent imgPath={"/resources/page 4 grand entrance.png"}
                     details={["A dramatic red carpet entrance with an archway of flowers, drapes, and golden lights."]}/>
     <DetailsContent imgPath={"/resources/page 4 live music.png"}
@@ -114,7 +122,7 @@ const entertainmentActivities = <div className="w-full flex flex-col items-cente
                     details={["A vintage-style photo booth with masquerade-themed props."]}/>
 </div>
 
-const diningDrinks = <div className="w-full flex flex-col items-center gap-[20px]">
+const diningDrinks = <div className="w-full flex flex-col items-center gap-[30px]">
     <DetailsContent imgPath={"/resources/page 5 appetizers and drinks.png"}
                     details={["An elaborate buffet with a 5-course menu and desserts."]}/>
     <DetailsContent imgPath={"/resources/page 5 elegant dinner.png"}

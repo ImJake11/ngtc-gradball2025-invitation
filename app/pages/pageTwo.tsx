@@ -12,14 +12,14 @@ const font = localFont({src: "../../public/gianteh.otf"});
 export default function PageTwo() {
     const ref = useRef(null);
 
-    const isInView = useInView(ref, {once: false, amount: "all"});
+    const isInView = useInView(ref, {once: false, amount: "some"});
 
     return (
         <MotionConfig transition={{
             duration: .30,
             ease: "linear",
         }}>
-            <div ref={ref} className="w-screen h-screen text-center relative">
+            <div className="w-screen h-screen text-center relative">
 
                 {/**  PAGE BACKGROUND*/}
                 <motion.img
@@ -127,6 +127,12 @@ export default function PageTwo() {
                         </div>
                     </div>
                 </motion.div>
+
+
+                {/** HIT BOX PURPOSES*/}
+                <div
+                    ref={ref}
+                    className="w-2 h-[90vh]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             </div>
         </MotionConfig>
     );

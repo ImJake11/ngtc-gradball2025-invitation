@@ -1,7 +1,6 @@
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
 import localFont from "next/font/local";
-import Image from "next/image";
 
 const gothic = localFont({
     src: "../../public/centurygothic.ttf",
@@ -16,7 +15,7 @@ export default function PageOne() {
 
     const inView = useInView(viewRef, {
         once: false,
-        amount: "all"
+        amount: "some"
     });
 
     const borderAnimationDur = .35;
@@ -130,7 +129,7 @@ export default function PageOne() {
 
             {/** DIV PURPOSE IS TO SHOW HIT BOX FOR REFERENCE TO LOAD ALL COMPONENT EG. BORDER MASK ETC */}
             <div ref={viewRef}
-                 className="absolute w-[80vw] h-[80vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                 className="absolute w-[10px] h-[80vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         </motion.div>
     );
 }
