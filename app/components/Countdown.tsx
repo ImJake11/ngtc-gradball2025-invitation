@@ -43,7 +43,7 @@ export default function Countdown() {
 
     return (
         <div
-            className="w-screen h-[100px] flex justify-center items-center absolute top-[78vw] left-1/2 -translate-x-1/2 gap-1">
+            className="w-screen h-[100px] flex justify-center items-center gap-2.5 ">
             <Tile isInView={isInView} ref={ref} dur={timeLeft.days} label="DAYS"/>
             <Tile isInView={isInView} ref={ref} dur={timeLeft.hours} label="hours"/>
             <Tile
@@ -76,14 +76,14 @@ function Tile({
     return (
         <motion.div
             ref={ref}
-            className="h-[70px] w-[70px] rounded-[11px] overflow-hidden flex flex-col justify-center relative text-[var(--secondary)]"
+            className="h-[80px] w-[80px] rounded-[14px] overflow-hidden flex flex-col justify-center relative text-[var(--secondary)]"
             animate={{scale: isInView ? 1 : 0}}
             exit={{scale: 0}}
         >
 
             {/** BORDER IMAGE*/}
             <motion.img src="/resources/page 2 timer.png"
-                        className={`absolute h-[70px] place-self-center`}
+                        className={`absolute h-[80px] place-self-center`}
             >
 
             </motion.img>
@@ -91,6 +91,16 @@ function Tile({
                 <motion.span
                     key={dur}
                     className="text-[30px] font-bold absolute place-self-center -translate-y-[5px]"
+
+                    style={{
+                        backgroundColor: "red",
+                        backgroundImage:
+                            "linear-gradient(45deg, #0e3168, #001138, #0e3168, #001138, #0e3168, #001138)",
+                        backgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }}
+
+
                     initial={{
                         opacity: 0,
                     }}

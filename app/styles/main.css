@@ -1,21 +1,10 @@
-.main-page {
+.page {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-
-.scroll-page {
-    width: 100vw;
-    height: 100vh;
-    max-width: 720px;
     text-align: center;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
+    overflow-y: auto;
 }
 
 

@@ -1,32 +1,29 @@
-import ReactPlayer from "react-player";
+"use client";
 
-export default function HighlightsComp({isLeft}: { isLeft: boolean }) {
-    function Content() {
-        return (
-            <div
-                className={`flex flex-col w-[40%] gap-[10px] ${
-                    isLeft ? undefined : "mr-[20px]"
-                } `}
-            >
-                <p className="font-bold">Spotlight 1</p>
-                <p className="text-[.8rem]">
-                    If the co and content appear on the same line, but the content is
-                    wrapping to the next line, it's likely due to insufficient width or
-                    incorrect layout settings.
-                </p>
-            </div>
-        );
+import ReactPlayer from "react-player";
+import {useRef, useState} from "react";
+import {OnProgressProps} from "react-player/base";
+
+export default function HighlightsComp() {
+    const playerRef = useRef<ReactPlayer | null>(null);
+
+    const [playedSeconds, setPlayedSeconds] = useState(0);
+
+    const handleProgress = (state: OnProgressProps) => {
+        setPlayedSeconds(state.playedSeconds);
+
+        if (playedSeconds >= 5) {
+            playerRef.current!.seekTo(0);
+        }
     }
 
-    return (
-        <div className="w-screen flex flex-row gap-[15px] overflow-hidden">
-            {isLeft && <Content/>}
+    return <div className="flex flex-col w-full items-center gap-2.5">
+        <span>Plaridel Graduation Ball 2024</span>
+        <div className="w-full h-[30vh] relative ">
             <div
-                className={`w-[60%] h-[200px] bg-transparent rounded-[10px] ${
-                    isLeft ? "mr-[20px]" : undefined
-                }`}
-            >
+                className="w-full h-full absolute overflow-hidden rounded-[20px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <ReactPlayer
+                    ref={playerRef}
                     height={"100%"}
                     width={"100%"}
                     loop
@@ -36,11 +33,19 @@ export default function HighlightsComp({isLeft}: { isLeft: boolean }) {
                     url={
                         "https://firebasestorage.googleapis.com/v0/b/isafe-bca33.appspot.com/o/video-samples%2FGala%20Night%20Teaser%20Video%202025.mp4?alt=media&token=ef693def-0a96-4180-a1da-63c71395ebc4"
                     }
+                    onProgress={handleProgress}
+
                 >
                     <source type="video/mp4"/>
                 </ReactPlayer>
             </div>
-            {!isLeft && <Content/>}
+            <img src="/resources/video border.png" alt="video border"
+                 className=" w-full h-[30vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+
         </div>
-    );
+        <img src="/resources/watch full video here.png" alt="watch full video"
+             className="w-[60vw] -translate-y-[20px]"/>
+
+
+    </div>
 }

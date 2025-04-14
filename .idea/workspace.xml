@@ -7,10 +7,14 @@
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/Countdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Countdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/DetailsContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/DetailsContent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageOne.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageOne.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageThree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageThree.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/pageTwo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/pageTwo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/HightLights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HightLights.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pageFour.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/highlights/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pageOne.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pageThree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/pageTwo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/calendar/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,27 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/RYZEN 2025/Desktop/NGTC PROJECT/gradball-invitation",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "C:\\Users\\RYZEN 2025\\Desktop\\NGTC PROJECT\\gradball-invitation\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RYZEN 2025/Desktop/NGTC PROJECT/gradball-invitation&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\RYZEN 2025\\Desktop\\NGTC PROJECT\\gradball-invitation\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\BATMAN\WebstormProjects\gradballinvi\public\resources" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\public\resources" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\highlights" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\details" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\calendar" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -89,7 +97,8 @@
       <workItem from="1744445635056" duration="5349000" />
       <workItem from="1744451095387" duration="13856000" />
       <workItem from="1744499346611" duration="3928000" />
-      <workItem from="1744591258646" duration="1491000" />
+      <workItem from="1744591258646" duration="7229000" />
+      <workItem from="1744601186225" duration="10493000" />
     </task>
     <servers />
   </component>

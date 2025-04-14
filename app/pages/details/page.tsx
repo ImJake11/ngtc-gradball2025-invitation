@@ -1,10 +1,13 @@
+"use client";
+
 import {motion, useInView} from "framer-motion";
 import DetailsContent from "@/app/components/DetailsContent";
 import AnimatedTitle from "@/app/components/AnimatedTitle";
 import {useRef} from "react";
+import NavBar from "@/app/components/navbar";
 
 
-export default function PageThree() {
+export default function Page() {
 
     const ref = useRef(null);
 
@@ -14,7 +17,7 @@ export default function PageThree() {
     return <div className="w-screen h-screen relative">
 
         {/**  BACKGROUND IMAGE*/}
-        <img src="/resources/page 3 4 5 6 bg.png" alt="bg"
+        <img src="/resources/page%203%204%205%206%20bg.png" alt="bg"
              className="w-screen h-screen absolute"
         />
 
@@ -54,7 +57,7 @@ export default function PageThree() {
         <motion.img
             src="/resources/NGTC Logo_GOLD.png"
             alt="border"
-            className="w-[10vw] absolute top-[10vw] left-1/2 -translate-x-1/2"
+            className="w-[10vw] absolute top-[17vw] left-1/2 -translate-x-1/2"
 
             animate={{
                 scale: inView ? 1 : 0,
@@ -65,7 +68,7 @@ export default function PageThree() {
         {/** BODY CONTAINER */}
 
         <div
-            className="p-[20px] w-[90vw] h-[87vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-auto gap-[70px]">
+            className=" p-[20px] w-[90vw] h-[82vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-auto gap-[50px]">
             <AnimatedTitle content={"Theme & Atmosphere"}/>
             {themeAtmosphere}
             <AnimatedTitle content={"Entertainment &m Activities"}/>
@@ -73,6 +76,10 @@ export default function PageThree() {
             <AnimatedTitle content={"Dining & Drinks"}/>
             {diningDrinks}
         </div>
+
+
+        {/** NAV BAR*/}
+        <NavBar/>
 
         {/** HIT BOX PURPOSES*/}
         <div

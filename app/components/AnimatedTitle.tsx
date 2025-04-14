@@ -1,3 +1,6 @@
+"use client";
+
+
 import localFont from "next/font/local";
 import {useRef} from "react";
 import {motion, useInView} from "framer-motion";
