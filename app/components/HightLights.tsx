@@ -23,7 +23,7 @@ export default function HighlightsComp() {
     }
 
     return <div className="flex flex-col w-full items-center gap-4 ">
-        <span className={`${font.className} font-semibold`}>Plaridel Graduation Ball 2024</span>
+        <span className={`${font.className} font-semibold text-center text-[3vw]`}>Plaridel Graduation Ball 2024</span>
 
         <div className="relative">
             <ReactPlayer

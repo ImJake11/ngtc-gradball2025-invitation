@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Countdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Countdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/HightLights.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/HightLights.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/highlights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/highlights/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/resources/watch full video here.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/resources/watch full video here.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <workItem from="1744499346611" duration="3928000" />
       <workItem from="1744591258646" duration="7229000" />
       <workItem from="1744601186225" duration="11306000" />
-      <workItem from="1744616458884" duration="2295000" />
+      <workItem from="1744616458884" duration="2628000" />
     </task>
     <servers />
   </component>

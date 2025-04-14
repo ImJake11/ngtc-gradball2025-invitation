@@ -25,7 +25,7 @@ export default function Page() {
 
     return (
         <motion.div
-            className="w-screen h-screen relative overflow-y-auto text-center"
+            className="w-screen h-screen relative overflow-y-auto overflow-x-hidden text-center"
         >
             <img
                 src={"/resources/page 3 4 5 6 bg.png"}
