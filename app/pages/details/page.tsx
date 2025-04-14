@@ -68,7 +68,7 @@ export default function Page() {
         {/** BODY CONTAINER */}
 
         <div
-            className=" p-[20px] w-[90vw] h-[82vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-auto gap-[50px]">
+            className=" p-[20px] w-[90vw] h-[82vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-y-auto overflow-x-hidden gap-[50px]">
             <AnimatedTitle content={"Theme & Atmosphere"}/>
             {themeAtmosphere}
             <AnimatedTitle content={"Entertainment &m Activities"}/>

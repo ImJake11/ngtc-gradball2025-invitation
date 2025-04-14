@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import bg from "@/public/bg.jpg";
+import bg from "@/public/resources/page 3 4 5 6 bg.png";
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
 import NavBar from "@/app/components/navbar";
@@ -15,11 +15,11 @@ export default function Page() {
     const inView = useInView(ref, {once: false, amount: "some"});
 
     return (
-        <div className="w-screen h-screen  flex flex-col justify-evenly box-border relative text-white overflow-hidden">
+        <div className="w-screen h-screen flex flex-col justify-evenly box-border relative text-white overflow-hidden">
             <Image
                 src={bg}
                 alt={"image"}
-                className="absolute z-0 w-dvw h-dvh"
+                className="absolute z-0 w-screen h-screen"
             ></Image>
 
 
