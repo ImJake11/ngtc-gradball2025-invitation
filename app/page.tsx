@@ -25,7 +25,7 @@ export default function Page() {
 
     return (
         <motion.div
-            className="page"
+            className="w-screen h-screen relative overflow-y-auto text-center"
         >
             <img
                 src={"/resources/page 3 4 5 6 bg.png"}
@@ -33,20 +33,6 @@ export default function Page() {
 
             />
 
-            <motion.div
-                className="w-[55vw] h-auto absolute top-[18vw] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
-                animate={{
-                    scale: inView ? 1 : 0,
-                    opacity: inView ? 1 : 0,
-                }}
-                transition={{
-                    ease: "easeInOut",
-                    duration: 0.55,
-                    delay: 0.6,
-                }}
-            >
-                <img src={"/resources/mask.webp"} alt="mask"/>
-            </motion.div>
 
             {/**  BORDERS */}
 
@@ -84,9 +70,22 @@ export default function Page() {
             {verticalBorder("top-[30vh]", false, inView)}
             {verticalBorder("top-[56vh]", false, inView)}
             {verticalBorder("top-[83vh]", false, inView)}
-            {verticalBorder("top-[110vh]", true, inView)}
-            {verticalBorder("top-[110vh]", false, inView)}
 
+
+            <motion.div
+                className="w-[55vw] h-auto absolute top-[18vw] left-1/2 traslate-y-[-50%] translate-x-[-50%]"
+                animate={{
+                    scale: inView ? 1 : 0,
+                    opacity: inView ? 1 : 0,
+                }}
+                transition={{
+                    ease: "easeInOut",
+                    duration: 0.55,
+                    delay: 0.6,
+                }}
+            >
+                <img src={"/resources/mask.webp"} alt="mask"/>
+            </motion.div>
 
             {/** TEXT DATA */}
 
@@ -104,12 +103,12 @@ export default function Page() {
 
             {Logo(inView)}
 
+
             {/** BORDERED WELCOME CONTAINER*/}
             <img src="/resources/page 1 welcome.png" alt="welcome border"
                  className="absolute top-[85vw] left-1/2 -translate-x-1/2"/>
 
             {MessageBody(inView)}
-
 
             {/** NAV BAR*/}
 

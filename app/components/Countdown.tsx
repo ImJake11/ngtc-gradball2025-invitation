@@ -76,21 +76,21 @@ function Tile({
     return (
         <motion.div
             ref={ref}
-            className="h-[80px] w-[80px] rounded-[14px] overflow-hidden flex flex-col justify-center relative text-[var(--secondary)]"
+            className="h-[15vw] w-[15vw] rounded-[14px] overflow-hidden flex flex-col justify-center relative text-[var(--secondary)]"
             animate={{scale: isInView ? 1 : 0}}
             exit={{scale: 0}}
         >
 
             {/** BORDER IMAGE*/}
             <motion.img src="/resources/page 2 timer.png"
-                        className={`absolute h-[80px] place-self-center`}
+                        className={`absolute h-[15vw] place-self-center`}
             >
 
             </motion.img>
             <AnimatePresence>
                 <motion.span
                     key={dur}
-                    className="text-[30px] font-bold absolute place-self-center -translate-y-[5px]"
+                    className="text-[6vw] font-bold absolute place-self-center -translate-y-[5px]"
 
                     style={{
                         backgroundColor: "red",
@@ -119,7 +119,7 @@ function Tile({
                     {dur}
                 </motion.span>
             </AnimatePresence>
-            <span className="absolute bottom-[10px] place-self-center uppercase text-[10px]">{label}</span>
+            <span className="absolute bottom-[2vw] place-self-center uppercase text-[2vw]">{label}</span>
         </motion.div>
     );
 }

@@ -14,7 +14,7 @@ export default function Page() {
     const inView = useInView(ref, {once: false, amount: "some"})
 
 
-    return <div className="w-screen h-screen relative">
+    return <div className="w-screen h-screen relative overflow-y-auto overflow-x-hidden">
 
         {/**  BACKGROUND IMAGE*/}
         <img src="/resources/page%203%204%205%206%20bg.png" alt="bg"

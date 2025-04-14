@@ -63,7 +63,7 @@ export default function Page() {
 
             {/**  HIGHLIGHT VIDEOS */}
             <div
-                className="w-[90vw] h-[90vh]  absolute bottom-1.5 left-1/2 -translate-x-1/2 flex flex-col p-[20px] overflow-y-auto">
+                className="w-[90vw] h-[90vh] gap-[60px]  absolute bottom-1.5 left-1/2 -translate-x-1/2 flex flex-col p-[20px] overflow-y-auto">
 
                 <HighlightsComp/>
                 <HighlightsComp/>
