@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/highlights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/highlights/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -92,7 +93,8 @@
       <workItem from="1744499346611" duration="3928000" />
       <workItem from="1744591258646" duration="7229000" />
       <workItem from="1744601186225" duration="11306000" />
-      <workItem from="1744616458884" duration="3162000" />
+      <workItem from="1744616458884" duration="3409000" />
+      <workItem from="1744677399505" duration="5331000" />
     </task>
     <servers />
   </component>

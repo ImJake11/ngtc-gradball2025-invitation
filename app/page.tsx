@@ -1,6 +1,6 @@
 "use client";
 
-import {useRef} from "react";
+import {useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
 import localFont from "next/font/local";
 import NavBar from "@/app/components/navbar";
@@ -14,6 +14,8 @@ const gianteh = localFont({
 })
 
 export default function Page() {
+    const [isLoading, setIsLoading] = useState(true);
+
     const viewRef = useRef(null);
 
     const inView = useInView(viewRef, {
@@ -21,14 +23,13 @@ export default function Page() {
         amount: "some"
     });
 
-    const borderAnimationDur = .35;
 
     return (
         <motion.div
             className="w-screen h-screen relative overflow-y-auto overflow-x-hidden text-center"
         >
             <img
-                src={"/resources/page 3 4 5 6 bg.png"}
+                src={"/resources/page 3 4 5 6 bg.webp"}
                 alt={"Page one background"}
 
             />
@@ -116,10 +117,15 @@ export default function Page() {
 
             {/** DIV PURPOSE IS TO SHOW HIT BOX FOR REFERENCE TO LOAD ALL COMPONENT EG. BORDER MASK ETC */}
             <div ref={viewRef}
-                 className="absolute w-[10px] h-[80vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                 className=" absolute w-[10px] h-[80vh] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+
         </motion.div>
+
+
     );
 }
+
 
 const Title = (inView: boolean) =>
     <motion.div
