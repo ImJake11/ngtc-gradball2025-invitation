@@ -4,12 +4,16 @@ import ReactPlayer from "react-player";
 import {useRef, useState} from "react";
 import {OnProgressProps} from "react-player/base";
 import localFont from "next/font/local";
-
+import {ThreeDot} from "react-loading-indicators";
+import {AnimatePresence, motion, MotionConfig} from "framer-motion";
 
 const font = localFont({src: "../../public/gianteh.otf"});
 
 
-export default function HighlightsComp() {
+export default function HighlightsComp({url, title, link}: { url: string, title: string, link: string }) {
+    const [isLoading, setIsLoading] = useState(true);
+
+
     const playerRef = useRef<ReactPlayer | null>(null);
 
     const [playedSeconds, setPlayedSeconds] = useState(0);
@@ -22,40 +26,97 @@ export default function HighlightsComp() {
         }
     }
 
-    return <div className="flex flex-col w-full items-center gap-4 ">
-        <span className={`${font.className} font-semibold text-center text-[3vw]`}>Plaridel Graduation Ball 2024</span>
+    return <MotionConfig transition={{
+        ease: "easeInOut",
+        duration: .35,
+    }}>
+        <div className="flex flex-col w-full items-center gap-4 ">
+            <span
+                className={`${font.className} font-semibold text-center text-[3vw]`}>{title}</span>
 
-        <div className="relative">
-            <ReactPlayer
-                ref={playerRef}
-                height={"100%"}
-                width={"100%"}
-                style={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                }}
-                loop
-                controls={false}
-                playing={true}
-                muted
-                url={
-                    "https://firebasestorage.googleapis.com/v0/b/isafe-bca33.appspot.com/o/video-samples%2FGala%20Night%20Teaser%20Video%202025.mp4?alt=media&token=ef693def-0a96-4180-a1da-63c71395ebc4"
-                }
-                onProgress={handleProgress}
+            <div className="relative">
+                <ReactPlayer
+                    ref={playerRef}
+                    height={"100%"}
+                    width={"100%"}
+                    style={{
+                        borderRadius: "20px",
+                        overflow: "hidden",
+                    }}
+                    loop
+                    controls={false}
+                    playing={true}
+                    muted
+                    url={url}
+                    onProgress={handleProgress}
 
-            >
-                <source type="video/mp4"/>
-            </ReactPlayer>
-            <div className="inset-0 absolute">
-                <img src="/resources/video%20border.png" alt="video border" style={{
-                    scale: "1.02",
-                    transform: "translate(0px,1px)",
-                }}/>
+                    onReady={() => setIsLoading(false)}
+
+                >
+
+                    <source type="video/mp4"/>
+                </ReactPlayer>
+                <AnimatePresence>
+                    {isLoading ? loadingIndicator : <div className="inset-0 absolute">
+                        <motion.img src="/resources/video%20border.png" alt="video border" style={{
+                            scale: "1.02",
+                            transform: "translate(0px,1px)",
+                        }}
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+
+                                    animate={{
+                                        opacity: 1,
+                                    }}
+
+                        />
+                    </div>}
+                </AnimatePresence>
             </div>
+
+
+            <AnimatePresence>
+                {!isLoading ?
+                    <a href={link} className="flex justify-center">
+                        <motion.img src="/resources/watch%20full%20video%20here.png" alt="videoborder" width={"80%"}
+
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+
+                                    animate={{
+                                        opacity: 1,
+                                    }}
+                        />
+                    </a> :
+                    <div className="w-[80%] h-[100px]"></div>}
+            </AnimatePresence>
+
         </div>
-
-
-        <img src="/resources/watch%20full%20video%20here.png" alt="videoborder" width={"80%"}/>
-
-    </div>
+    </MotionConfig>
 }
+
+
+const loadingIndicator = <AnimatePresence>
+    <motion.div
+        className="w-[80vw] h-[300px]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4"
+
+        initial={{
+            opacity: 0,
+        }}
+
+        animate={{
+            opacity: 1,
+        }}
+
+        exit={{
+            opacity: 0,
+        }}
+    >
+
+        <motion.img src="/resources/NGTC%20Logo_GOLD.png" width={60} alt="logo"/>
+        <ThreeDot color="var(--primary)"/>
+
+    </motion.div>
+</AnimatePresence>

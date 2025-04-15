@@ -22,6 +22,17 @@ export default function Page() {
                 className="absolute z-0 w-screen h-screen"
             ></Image>
 
+            {/**  LOGO */}
+            <motion.img
+                src="/resources/NGTC Logo_GOLD.png"
+                alt="border"
+                className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
+
+                animate={{
+                    scale: inView ? 1 : 0,
+                }}
+            />
+
 
             {/**  BORDERS */}
 
@@ -63,11 +74,16 @@ export default function Page() {
 
             {/**  HIGHLIGHT VIDEOS */}
             <div
-                className="w-[90vw] h-[90vh] gap-[60px]  absolute bottom-1.5 left-1/2 -translate-x-1/2 flex flex-col p-[20px] overflow-y-auto">
+                className="w-[90vw] h-[78vh] gap-[60px]  absolute bottom-1.5 left-1/2 -translate-x-1/2 flex flex-col p-[20px] overflow-y-auto">
 
-                <HighlightsComp/>
-                <HighlightsComp/>
-                <HighlightsComp/>
+                <HighlightsComp
+                    link="https://www.youtube.com/watch?v=P3u9YF7qALM"
+                    title={"Plaridel Graduation Ball 2024"}
+                    url={"https://firebasestorage.googleapis.com/v0/b/isafe-fcac7.appspot.com/o/bgtc%2FPLARIDEL.mp4?alt=media&token=ad967634-6169-4c10-b1a7-863b1265f612"}/>
+                <HighlightsComp
+                    link="https://www.youtube.com/watch?v=d1GBIIpIH0s"
+                    title={"San Simon Graduation Ball 2024"}
+                    url={"https://firebasestorage.googleapis.com/v0/b/isafe-fcac7.appspot.com/o/bgtc%2FSANSIMON.mp4?alt=media&token=1d490317-62f0-4de5-8e91-b9d312e200d5"}/>
 
 
             </div>

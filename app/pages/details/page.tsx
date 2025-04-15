@@ -17,7 +17,7 @@ export default function Page() {
     return <div className="w-screen h-screen relative overflow-y-auto overflow-x-hidden">
 
         {/**  BACKGROUND IMAGE*/}
-        <img src="/resources/page%203%204%205%206%20bg.png" alt="bg"
+        <img src="/resources/page%203%204%205%206%20bg.webp" alt="bg"
              className="w-screen h-screen absolute"
         />
 
@@ -57,7 +57,7 @@ export default function Page() {
         <motion.img
             src="/resources/NGTC Logo_GOLD.png"
             alt="border"
-            className="w-[10vw] absolute top-[17vw] left-1/2 -translate-x-1/2"
+            className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
 
             animate={{
                 scale: inView ? 1 : 0,
@@ -68,10 +68,10 @@ export default function Page() {
         {/** BODY CONTAINER */}
 
         <div
-            className=" p-[20px] w-[90vw] h-[82vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-y-auto overflow-x-hidden gap-[50px]">
+            className=" p-[20px] w-[80vw] h-[77vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-y-auto overflow-x-hidden gap-[50px]">
             <AnimatedTitle content={"Theme & Atmosphere"}/>
             {themeAtmosphere}
-            <AnimatedTitle content={"Entertainment &m Activities"}/>
+            <AnimatedTitle content={"Entertainment & Activities"}/>
             {entertainmentActivities}
             <AnimatedTitle content={"Dining & Drinks"}/>
             {diningDrinks}

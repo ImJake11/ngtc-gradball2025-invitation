@@ -25,15 +25,26 @@ export default function Page() {
 
                 {/**  PAGE BACKGROUND*/}
                 <motion.img
-                    src="/resources/page 2 bg.png"
+                    src="/resources/page 3 4 5 6 bg.webp"
                     alt="border"
                     className="w-screen h-screen absolute"
                 />
 
                 <motion.p
-                    className={`${font.className} text-[5vw] w-screen text-white font-bold absolute top-[23vw] left-1/2 -translate-x-1/2`}>
+                    className={`${font.className} text-[5vw] w-screen text-white font-bold absolute top-[37vw] left-1/2 -translate-x-1/2`}>
                     Mark your calendar!
                 </motion.p>
+
+                {/**  LOGO */}
+                <motion.img
+                    src="/resources/NGTC Logo_GOLD.png"
+                    alt="border"
+                    className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
+
+                    animate={{
+                        scale: isInView ? 1 : 0,
+                    }}
+                />
 
 
                 {/** BORDERS*/}
@@ -72,7 +83,7 @@ export default function Page() {
                 {verticalBorder("top-[80vh]", false, isInView)}
 
                 <div
-                    className="w-[90vw] h-[80vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
+                    className="w-[90vw] h-[70vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
 
 
                     {/** LOCATION CONTAINER */}
@@ -88,7 +99,7 @@ export default function Page() {
 
                     {/** COUNTDOWN*/}
                     <Countdown/>
-                    
+
 
                     {/** MAP LOCATION */}
                     <motion.div className="w-[85vw] h-[43vw]"
