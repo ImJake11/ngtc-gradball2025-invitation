@@ -27,7 +27,7 @@ export default function DetailsContent({imgPath, details,}: { imgPath: string, d
     >
         <motion.img src={imgPath} alt="img" className="relative w-[85vw]"/>
         <div
-            className=" mt-[20px] absolute inset-0 pl-9 pr-9 translate-y-[5px] text-[3vw] font-bold text-[var(--secondary)] flex flex-col justify-evenly text-center">
+            className=" mt-[20px] absolute inset-0 pl-9 pr-9  text-[2.8vw] font-bold text-[var(--secondary)] flex flex-col justify-evenly text-center">
             {details.map((t, i) => <span key={i}>{t}</span>)}
         </div>
 

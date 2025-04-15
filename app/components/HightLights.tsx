@@ -13,7 +13,6 @@ const font = localFont({src: "../../public/gianteh.otf"});
 export default function HighlightsComp({url, title, link}: { url: string, title: string, link: string }) {
     const [isLoading, setIsLoading] = useState(true);
 
-
     const playerRef = useRef<ReactPlayer | null>(null);
 
     const [playedSeconds, setPlayedSeconds] = useState(0);
@@ -30,32 +29,12 @@ export default function HighlightsComp({url, title, link}: { url: string, title:
         ease: "easeInOut",
         duration: .35,
     }}>
+
         <div className="flex flex-col w-full items-center gap-4 ">
             <span
                 className={`${font.className} font-semibold text-center text-[3vw]`}>{title}</span>
 
             <div className="relative">
-                <ReactPlayer
-                    ref={playerRef}
-                    height={"100%"}
-                    width={"100%"}
-                    style={{
-                        borderRadius: "20px",
-                        overflow: "hidden",
-                    }}
-                    loop
-                    controls={false}
-                    playing={true}
-                    muted
-                    url={url}
-                    onProgress={handleProgress}
-
-                    onReady={() => setIsLoading(false)}
-
-                >
-
-                    <source type="video/mp4"/>
-                </ReactPlayer>
                 <AnimatePresence>
                     {isLoading ? loadingIndicator : <div className="inset-0 absolute">
                         <motion.img src="/resources/video%20border.png" alt="video border" style={{
@@ -73,6 +52,27 @@ export default function HighlightsComp({url, title, link}: { url: string, title:
                         />
                     </div>}
                 </AnimatePresence>
+                <ReactPlayer
+                    ref={playerRef}
+                    height={"100%"}
+                    width={"100%"}
+                    style={{
+                        borderRadius: "20px",
+                        overflow: "hidden",
+                    }}
+                    loop
+                    playing={true}
+                    controls={true}
+                    muted
+                    url={url}
+                    onProgress={handleProgress}
+                    onReady={() => setIsLoading(false)}
+
+                >
+                    <source type="video/mp4"/>
+
+                </ReactPlayer>
+
             </div>
 
 
