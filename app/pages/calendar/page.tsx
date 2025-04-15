@@ -30,22 +30,6 @@ export default function Page() {
                     className="w-screen h-screen absolute"
                 />
 
-                <motion.p
-                    className={`${font.className} text-[5vw] w-screen text-white font-bold absolute top-[37vw] left-1/2 -translate-x-1/2`}>
-                    Mark your calendar!
-                </motion.p>
-
-                {/**  LOGO */}
-                <motion.img
-                    src="/resources/NGTC Logo_GOLD.png"
-                    alt="border"
-                    className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
-
-                    animate={{
-                        scale: isInView ? 1 : 0,
-                    }}
-                />
-
 
                 {/** BORDERS*/}
                 <motion.img
@@ -83,7 +67,25 @@ export default function Page() {
                 {verticalBorder("top-[80vh]", false, isInView)}
 
                 <div
-                    className="w-[90vw] h-[70vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
+                    className=" w-[90vw] h-[90vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
+
+                    {/**  LOGO */}
+                    <motion.img
+                        src="/resources/NGTC Logo_GOLD.png"
+                        alt="border"
+                        className="w-[15vw]"
+
+                        animate={{
+                            scale: isInView ? 1 : 0,
+                        }}
+                    />
+
+                    {/** TITLE */}
+
+                    <motion.p
+                        className={`${font.className} text-[5vw] w-screen text-white font-bold -translate-y-[2.5vw]`}>
+                        Mark your calendar!
+                    </motion.p>
 
 
                     {/** LOCATION CONTAINER */}
