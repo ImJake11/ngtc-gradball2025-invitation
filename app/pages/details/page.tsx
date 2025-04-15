@@ -131,7 +131,7 @@ const entertainmentActivities = <div className="w-full flex flex-col items-cente
 
 const diningDrinks = <div className="w-full flex flex-col items-center gap-[30px]">
     <DetailsContent imgPath={"/resources/page 5 appetizers and drinks.png"}
-                    details={["An elaborate buffet with a 5-course menu and desserts."]}/>
-    <DetailsContent imgPath={"/resources/page 5 elegant dinner.png"}
                     details={["Bite-sized delicacies and unlimited drinks."]}/>
+    <DetailsContent imgPath={"/resources/page 5 elegant dinner.png"}
+                    details={["An elaborate buffet with a 5-course menu and desserts."]}/>
 </div>

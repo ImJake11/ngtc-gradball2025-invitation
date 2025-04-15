@@ -30,7 +30,7 @@ export default function HighlightsComp({url, title, link}: { url: string, title:
         duration: .35,
     }}>
 
-        <div className="flex flex-col w-full items-center gap-4 ">
+        <div className="flex flex-col w-full items-center gap-4">
             <span
                 className={`${font.className} font-semibold text-center text-[3vw]`}>{title}</span>
 
