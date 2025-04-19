@@ -20,7 +20,7 @@ export default function Home() {
 
     return <div className="w-screen min-h-screen relative flex bg-[#001143] flex-col">
 
-        <div className="h-screen w-screen overflow-y-auto relative">
+        <div className="h-screen w-screen overflow-y-auto overflow-x-hidden relative">
 
             <img src="/resources/border.png" alt="mask"
                  className="w-[100vw] scale-[1.5] absolute rotate-[180deg] top-[5vw]"/>
