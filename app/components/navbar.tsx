@@ -28,12 +28,12 @@ const buttonTile = (label: string, path: string) => {
     }
 
     return <button type="submit"
-                   className="uppercase text-[2.5vw] "
+                   className="uppercase text-[3vw] "
                    style={{
                        background: isSelected ? "linear-gradient(180deg, transparent, transparent,var(--primary))" : undefined,
                        padding: "0px 10px 0px 10px",
                        color: isSelected ? "white" : "var(--primary)",
-                       borderRadius: "px",
+                       borderRadius: "3px",
                    }}
 
                    onClick={handleNav}

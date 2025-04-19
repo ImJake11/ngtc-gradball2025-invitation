@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RYZEN 2025/Desktop/NGTC PROJECT/gradball-invitation&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/BATMAN/WebstormProjects/ngtc-gradball2025-invitation&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -56,17 +59,17 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\RYZEN 2025\\Desktop\\NGTC PROJECT\\gradball-invitation\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\BATMAN\\WebstormProjects\\ngtc-gradball2025-invitation\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BATMAN\WebstormProjects\ngtc-gradball2025-invitation\public\music" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\public\resources" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\highlights" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\details" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\calendar" />
-      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -93,6 +96,8 @@
       <workItem from="1744601186225" duration="11306000" />
       <workItem from="1744616458884" duration="3409000" />
       <workItem from="1744677399505" duration="12673000" />
+      <workItem from="1745032375272" duration="1519000" />
+      <workItem from="1745033937421" duration="1051000" />
     </task>
     <servers />
   </component>

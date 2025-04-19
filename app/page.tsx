@@ -1,9 +1,10 @@
 "use client";
 
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, useInView} from "framer-motion";
 import localFont from "next/font/local";
 import NavBar from "@/app/components/navbar";
+import {Howl} from 'howler';
 
 const gothic = localFont({
     src: "../public/centurygothic.ttf",
@@ -12,6 +13,7 @@ const gothic = localFont({
 const gianteh = localFont({
     src: "../public/gianteh.otf",
 })
+
 
 export default function Page() {
     const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +25,29 @@ export default function Page() {
         amount: "some"
     });
 
+    const soundRef = useRef<Howl | null>(null);
+
+
+    useEffect(() => {
+        soundRef.current = new Howl({src: ['/music/page 1 music.mp3'], loop: true, volume: 1, autoplay: true,},);
+
+        let state = soundRef.current.state()
+
+        soundRef.current.play();
+
+
+        return () => {
+            soundRef.current?.stop();
+        }
+        
+    }, []);
 
     return (
         <motion.div
             className="w-screen h-screen relative overflow-y-auto overflow-x-hidden text-center"
         >
+
+
             <img
                 src={"/resources/page 3 4 5 6 bg.webp"}
                 alt={"Page one background"}
