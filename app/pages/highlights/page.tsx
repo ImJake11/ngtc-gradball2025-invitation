@@ -3,9 +3,10 @@
 import Image from "next/image";
 import bg from "@/public/resources/page 3 4 5 6 bg.png";
 import {motion, useInView} from "framer-motion";
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import NavBar from "@/app/components/navbar";
 import HighlightsComp from "@/app/components/HightLights";
+import {Howl} from "howler";
 
 export default function Page() {
 
@@ -13,6 +14,23 @@ export default function Page() {
 
 
     const inView = useInView(ref, {once: false, amount: "some"});
+
+    const soundRef = useRef<Howl | null>(null);
+
+
+    useEffect(() => {
+        soundRef.current = new Howl({src: ['/music/page 4 music.mp3'], loop: true, volume: 1, autoplay: true,},);
+
+        let state = soundRef.current.state()
+
+        soundRef.current.play();
+
+
+        return () => {
+            soundRef.current?.stop();
+        }
+
+    }, []);
 
     return (
         <div className="w-screen h-screen flex flex-col justify-evenly box-border relative text-white overflow-hidden">

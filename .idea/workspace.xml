@@ -8,8 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/calendar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/calendar/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/highlights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/highlights/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +66,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BATMAN\WebstormProjects\ngtc-gradball2025-invitation\public\resources" />
       <recent name="C:\Users\BATMAN\WebstormProjects\ngtc-gradball2025-invitation\public\music" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\public\resources" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\highlights" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\details" />
-      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\calendar" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,7 +98,7 @@
       <workItem from="1744616458884" duration="3409000" />
       <workItem from="1744677399505" duration="12673000" />
       <workItem from="1745032375272" duration="1519000" />
-      <workItem from="1745033937421" duration="1051000" />
+      <workItem from="1745033937421" duration="9917000" />
     </task>
     <servers />
   </component>

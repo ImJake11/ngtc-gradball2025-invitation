@@ -1,11 +1,12 @@
 "use client"
 
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import {motion, MotionConfig, useInView} from "framer-motion";
 import localFont from "next/font/local";
 import Countdown from "@/app/components/Countdown";
 import MapComponent from "@/app/components/map";
 import NavBar from "@/app/components/navbar";
+import {Howl} from "howler";
 
 
 const font = localFont({src: "../../../public/gianteh.otf"});
@@ -14,6 +15,23 @@ export default function Page() {
     const ref = useRef(null);
 
     const isInView = useInView(ref, {once: false, amount: "some"});
+
+    const soundRef = useRef<Howl | null>(null);
+
+
+    useEffect(() => {
+        soundRef.current = new Howl({src: ['/music/page 2 music.mp3'], loop: true, volume: 1, autoplay: true,},);
+
+        let state = soundRef.current.state()
+
+        soundRef.current.play();
+
+
+        return () => {
+            soundRef.current?.stop();
+        }
+
+    }, []);
 
 
     return (

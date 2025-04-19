@@ -5,7 +5,7 @@ export default function NavBar() {
 
     return <div className="w-screen flex justify-center gap-[10px] absolute top-[12vw]  font-[600]">
 
-        {buttonTile("home", "/")}
+        {buttonTile("home", "/pages/home")}
         {buttonTile("calendar", "/pages/calendar")}
         {buttonTile("details", "/pages/details")}
         {buttonTile("highlights", "/pages/highlights")}

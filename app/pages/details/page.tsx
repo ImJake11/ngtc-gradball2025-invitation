@@ -3,15 +3,34 @@
 import {motion, useInView} from "framer-motion";
 import DetailsContent from "@/app/components/DetailsContent";
 import AnimatedTitle from "@/app/components/AnimatedTitle";
-import {useRef} from "react";
+import {useEffect, useRef} from "react";
 import NavBar from "@/app/components/navbar";
+import {Howl} from "howler";
 
 
 export default function Page() {
 
     const ref = useRef(null);
 
-    const inView = useInView(ref, {once: false, amount: "some"})
+    const inView = useInView(ref, {once: false, amount: "some"});
+
+
+    const soundRef = useRef<Howl | null>(null);
+
+
+    useEffect(() => {
+        soundRef.current = new Howl({src: ['/music/page 3 music.mp3'], loop: true, volume: 1, autoplay: true,},);
+
+        let state = soundRef.current.state()
+
+        soundRef.current.play();
+
+
+        return () => {
+            soundRef.current?.stop();
+        }
+
+    }, []);
 
 
     return <div className="w-screen h-screen relative overflow-y-auto overflow-x-hidden">
