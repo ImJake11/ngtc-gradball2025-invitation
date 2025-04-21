@@ -1,6 +1,6 @@
 "use client";
 
-import {motion, useInView} from "framer-motion";
+import {motion, MotionConfig} from "framer-motion";
 import DetailsContent from "@/app/components/DetailsContent";
 import AnimatedTitle from "@/app/components/AnimatedTitle";
 import {useEffect, useRef} from "react";
@@ -9,11 +9,6 @@ import {Howl} from "howler";
 
 
 export default function Page() {
-
-    const ref = useRef(null);
-
-    const inView = useInView(ref, {once: false, amount: "some"});
-
 
     const soundRef = useRef<Howl | null>(null);
 
@@ -33,97 +28,103 @@ export default function Page() {
     }, []);
 
 
-    return <div className="w-screen h-screen relative overflow-y-auto overflow-x-hidden">
+    return <MotionConfig transition={{
+        duration: .35,
+        ease: "linear",
+        delay: .600,
+    }}>
+        <div className="w-screen h-screen relative overflow-y-auto overflow-x-hidden">
 
-        {/**  BACKGROUND IMAGE*/}
-        <img src="/resources/page%203%204%205%206%20bg.webp" alt="bg"
-             className="w-screen h-screen absolute"
-        />
+            {/**  BACKGROUND IMAGE*/}
+            <img src="/resources/page%203%204%205%206%20bg.webp" alt="bg"
+                 className="w-screen h-screen absolute"
+            />
 
-        {/**  BORDERS*/}
-        <motion.img
-            src="/resources/border.png"
-            alt="border"
-            className="w-[100vw] absolute top-[-14vw] left-0"
+            {/**  BORDERS*/}
+            <motion.img
+                src="/resources/border.png"
+                alt="border"
+                className="w-[100vw] absolute top-[-14vw] left-0"
 
-            animate={{translateY: inView ? "0px" : "-100px"}}
-        />
-        <motion.img
-            src="/resources/border.png"
-            alt="border"
-            className="w-[100vw] absolute top-[7vw] left-[78vw]"
+                animate={{
+                    translateY: ["-100px", "0px"],
+                }}
+            />
+            <motion.img
+                src="/resources/border.png"
+                alt="border"
+                className="w-[100vw] absolute top-[7vw] left-[78vw]"
 
-            animate={{translateX: inView ? "0px" : "100px", opacity: inView ? 1 : 0}}
-        />
-
-        <motion.img
-            src="/resources/border.png"
-            alt="border"
-            className="w-[100vw] absolute top-[7vw] right-[78vw]"
-
-            animate={{translateX: inView ? "0px" : "-100px", opacity: inView ? 1 : 0}}
-        />
-
-        {verticalBorder("top-[27vh]", true, inView)}
-        {verticalBorder("top-[53vh]", true, inView)}
-        {verticalBorder("top-[80vh]", true, inView)}
-        {verticalBorder("top-[27vh]", false, inView)}
-        {verticalBorder("top-[53vh]", false, inView)}
-        {verticalBorder("top-[80vh]", false, inView)}
+                animate={{
+                    translateX: ["100px", "0px"],
+                }}
 
 
-        {/**  LOGO */}
-        <motion.img
-            src="/resources/NGTC Logo_GOLD.png"
-            alt="border"
-            className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
+            />
 
-            animate={{
-                scale: inView ? 1 : 0,
-            }}
-        />
+            <motion.img
+                src="/resources/border.png"
+                alt="border"
+                className="w-[100vw] absolute top-[7vw] left-[-78vw]"
+
+                animate={{
+                    translateX: ["-100px", "0px"],
+                }}
+            />
+
+            {verticalBorder("top-[30vh]", true)}
+            {verticalBorder("top-[56vh]", true)}
+            {verticalBorder("top-[83vh]", true)}
+            {verticalBorder("top-[30vh]", false)}
+            {verticalBorder("top-[56vh]", false)}
+            {verticalBorder("top-[83vh]", false)}
 
 
-        {/** BODY CONTAINER */}
+            {/**  LOGO */}
+            <motion.img
+                src="/resources/NGTC Logo_GOLD.png"
+                alt="border"
+                className="w-[15vw] absolute top-[19vw] left-1/2 -translate-x-1/2"
 
-        <div
-            className=" p-[20px] w-[80vw] h-[77vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-y-auto overflow-x-hidden gap-[50px]">
-            <AnimatedTitle content={"Theme & Atmosphere"}/>
-            {themeAtmosphere}
-            <AnimatedTitle content={"Entertainment & Activities"}/>
-            {entertainmentActivities}
-            <AnimatedTitle content={"Dining & Drinks"}/>
-            {diningDrinks}
+                animate={{
+                    scale: [0, 1],
+                }}
+            />
+
+
+            {/** BODY CONTAINER */}
+
+            <div
+                className=" p-[20px] w-[80vw] h-[77vh] absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center overflow-y-auto overflow-x-hidden gap-[50px]">
+                <AnimatedTitle content={"Theme & Atmosphere"}/>
+                {themeAtmosphere}
+                <AnimatedTitle content={"Entertainment & Activities"}/>
+                {entertainmentActivities}
+                <AnimatedTitle content={"Dining & Drinks"}/>
+                {diningDrinks}
+            </div>
+
+
+            {/** NAV BAR*/}
+            <NavBar/>
+
+
         </div>
-
-
-        {/** NAV BAR*/}
-        <NavBar/>
-
-        {/** HIT BOX PURPOSES*/}
-        <div
-            ref={ref}
-            className="w-2 h-[90vh]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        </div>
-
-
-    </div>
+    </MotionConfig>
 
 }
 
 
-const verticalBorder = (top: string, isLeft: boolean, inView: boolean) => <motion.img
+const verticalBorder = (top: string, isLeft: boolean) => <motion.img
     src="/resources/border.png"
     alt="border"
     className={`w-[55vw] absolute ${top} ${isLeft ? "left-[-29vw] rotate-[90deg]" : "right-[-29vw] rotate-[-90deg]"}`}
 
-
     animate={{
-        translateY: inView ? "0px" : "100px",
-        opacity: inView ? 1 : 0,
+        translateY: ["100px", "0px"],
+        opacity: [0, 1],
     }}
 />
-
 
 const themeAtmosphere =
     <div className="w-full flex flex-col items-center gap-[30px]">

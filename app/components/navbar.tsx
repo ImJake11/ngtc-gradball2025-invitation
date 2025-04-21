@@ -1,24 +1,27 @@
+"use client";
+
 import {usePathname, useRouter} from "next/navigation";
+import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 
 export default function NavBar() {
 
+    const router = useRouter();
+
     return <div className="w-screen flex justify-center gap-[10px] absolute top-[12vw]  font-[600]">
 
-        {buttonTile("home", "/pages/home")}
-        {buttonTile("calendar", "/pages/calendar")}
-        {buttonTile("details", "/pages/details")}
-        {buttonTile("highlights", "/pages/highlights")}
-
+        {buttonTile("home", "/pages/home", router)}
+        {buttonTile("calendar", "/pages/calendar", router)}
+        {buttonTile("details", "/pages/details", router)}
+        {buttonTile("highlights", "/pages/highlights", router)}
 
     </div>
 }
 
 
-const buttonTile = (label: string, path: string) => {
+const buttonTile = (label: string, path: string, router: AppRouterInstance) => {
     const pathname = usePathname();
 
-    const router = useRouter();
 
     const isSelected = pathname === path;
 

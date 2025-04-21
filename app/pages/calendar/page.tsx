@@ -1,7 +1,7 @@
 "use client"
 
 import {useEffect, useRef} from "react";
-import {motion, MotionConfig, useInView} from "framer-motion";
+import {motion, MotionConfig} from "framer-motion";
 import localFont from "next/font/local";
 import Countdown from "@/app/components/Countdown";
 import MapComponent from "@/app/components/map";
@@ -12,9 +12,6 @@ import {Howl} from "howler";
 const font = localFont({src: "../../../public/gianteh.otf"});
 
 export default function Page() {
-    const ref = useRef(null);
-
-    const isInView = useInView(ref, {once: false, amount: "some"});
 
     const soundRef = useRef<Howl | null>(null);
 
@@ -38,11 +35,12 @@ export default function Page() {
         <MotionConfig transition={{
             duration: .30,
             ease: "linear",
+            delay: .600,
         }}>
             <div className="w-screen h-screen text-center relative overflow-hidden">
 
                 {/**  PAGE BACKGROUND*/}
-                <motion.img
+                <img
                     src="/resources/page 3 4 5 6 bg.webp"
                     alt="border"
                     className="w-screen h-screen absolute"
@@ -54,6 +52,10 @@ export default function Page() {
                     src="/resources/border.png"
                     alt="border"
                     className="w-[100vw] absolute top-[-14vw] left-0"
+
+                    animate={{
+                        translateY: ["-100px", "0px"],
+                    }}
                 />
                 <motion.img
                     src="/resources/border.png"
@@ -61,7 +63,7 @@ export default function Page() {
                     className="w-[100vw] absolute top-[7vw] left-[78vw]"
 
                     animate={{
-                        opacity: isInView ? 1 : 0
+                        translateX: ["100px", "0px"],
                     }}
 
 
@@ -73,16 +75,16 @@ export default function Page() {
                     className="w-[100vw] absolute top-[7vw] left-[-78vw]"
 
                     animate={{
-                        opacity: isInView ? 1 : 0
+                        translateX: ["-100px", "0px"],
                     }}
                 />
 
-                {verticalBorder("top-[28vh]", true, isInView)}
-                {verticalBorder("top-[55vh]", true, isInView)}
-                {verticalBorder("top-[80vh]", true, isInView)}
-                {verticalBorder("top-[28vh]", false, isInView)}
-                {verticalBorder("top-[55vh]", false, isInView)}
-                {verticalBorder("top-[80vh]", false, isInView)}
+                {verticalBorder("top-[30vh]", true)}
+                {verticalBorder("top-[56vh]", true)}
+                {verticalBorder("top-[83vh]", true)}
+                {verticalBorder("top-[30vh]", false)}
+                {verticalBorder("top-[56vh]", false)}
+                {verticalBorder("top-[83vh]", false)}
 
                 <div
                     className=" w-[90vw] h-[90vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
@@ -94,7 +96,7 @@ export default function Page() {
                         className="w-[15vw]"
 
                         animate={{
-                            scale: isInView ? 1 : 0,
+                            scale: [0, 1],
                         }}
                     />
 
@@ -123,10 +125,9 @@ export default function Page() {
 
                     {/** MAP LOCATION */}
                     <motion.div className="w-[85vw] h-[43vw]"
-
                                 animate={{
-                                    translateY: isInView ? "0px" : "200px",
-                                    opacity: isInView ? 1 : 0,
+                                    translateY: ["200px", "0px"],
+                                    opacity: [0, 1],
                                 }}
                     >
                         <div className="relative w-[85vw]">
@@ -144,10 +145,6 @@ export default function Page() {
 
                 <NavBar/>
 
-                {/** HIT BOX PURPOSES*/}
-                <div
-                    ref={ref}
-                    className="w-2 h-[90vh]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
             </div>
         </MotionConfig>
     );
@@ -171,14 +168,13 @@ const details = <div
 </div>
 
 
-const verticalBorder = (top: string, isLeft: boolean, inView: boolean) => <motion.img
+const verticalBorder = (top: string, isLeft: boolean) => <motion.img
     src="/resources/border.png"
     alt="border"
     className={`w-[55vw] absolute ${top} ${isLeft ? "left-[-29vw] rotate-[90deg]" : "right-[-29vw] rotate-[-90deg]"}`}
 
-
     animate={{
-        translateY: inView ? "0px" : "100px",
-        opacity: inView ? 1 : 0,
+        translateY: ["100px", "0px"],
+        opacity: [0, 1],
     }}
 />
