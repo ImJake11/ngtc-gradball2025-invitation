@@ -87,7 +87,7 @@ export default function Page() {
                 {verticalBorder("top-[83vh]", false)}
 
                 <div
-                    className=" w-[90vw] h-[90vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center">
+                    className=" w-[90vw] h-[87vh] gap-[20px] absolute bottom-[5vw] left-1/2 -translate-x-1/2 flex flex-col justify-center items-center overflow-y-auto overflow-x-hidden">
 
                     {/**  LOGO */}
                     <motion.img
@@ -116,6 +116,26 @@ export default function Page() {
                             className="w-[85vw]"
                         />
                         {details}
+                    </div>
+
+                    <div className={`${font.className} text-white font-semibold text-[2.7vw] pl-[10px] pr-[10px]`}>
+                        <p>
+                            The night of mystery and magic is calling.
+                        </p>
+                        <p>
+                            Get your ticket now from the Admin Office!
+                        </p>
+                    </div>
+
+
+                    {/** IMAGE CONTAINER */}
+                    <div className="w-full h-fit p-[10px]">
+                        <img className="w-full" src="/resources/Graduation%20Ball%20Ticket%20Invitation.jpg"
+                             alt="ticket"
+                             style={{
+                                 filter: "blur(2px)"
+                             }}
+                        />
                     </div>
 
 

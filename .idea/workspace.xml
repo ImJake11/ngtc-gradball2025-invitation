@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a674b2e6-b579-45ec-ba8e-8bd7776b93e3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/calendar/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/calendar/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/details/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/details/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/highlights/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/highlights/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/pages/home/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/home/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\ngtc-gradball2025-invitation\public\resources" />
+      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\ngtc-gradball2025-invitation\public" />
       <recent name="C:\Users\BATMAN\WebstormProjects\ngtc-gradball2025-invitation\public\resources" />
       <recent name="C:\Users\BATMAN\WebstormProjects\ngtc-gradball2025-invitation\public\music" />
       <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\public\resources" />
-      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\highlights" />
-      <recent name="C:\Users\RYZEN 2025\Desktop\NGTC PROJECT\gradball-invitation\app\pages\details" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -100,7 +95,8 @@
       <workItem from="1744677399505" duration="12673000" />
       <workItem from="1745032375272" duration="1519000" />
       <workItem from="1745033937421" duration="10193000" />
-      <workItem from="1745197826790" duration="6457000" />
+      <workItem from="1745197826790" duration="7249000" />
+      <workItem from="1745212765606" duration="996000" />
     </task>
     <servers />
   </component>
